@@ -1,4 +1,3 @@
-android/
 build/
 .dart_tool/
 .vscode/
@@ -11,6 +10,9 @@ pubspec.lock
 .metadata
 lib/firebase_options.dart
 
+android/*
 !android/build.gradle
+android/app/*
 !android/app/build.gradle
+android/app/src/main/*
 !android/app/src/main/AndroidManifest.xml
