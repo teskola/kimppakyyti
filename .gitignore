@@ -12,5 +12,6 @@ pubspec.lock
 .metadata
 lib/firebase_options.dart
 
+!android/build.gradle
 !android/app/build.gradle
 !android/app/src/main/AndroidManifest.xml
