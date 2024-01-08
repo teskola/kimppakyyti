@@ -54,7 +54,7 @@ class Request {
 class DirectionsProvider {
   static const Map<String, String> headers = {
     "Content-Type": "application/json",
-    "X-Goog-Api-Key": String.fromEnvironment('API_KEY'),
+    "X-Goog-Api-Key": String.fromEnvironment('ROUTES'),
     "X-Goog-FieldMask":
         "routes.legs.duration,routes.legs.distanceMeters,routes.legs.polyline.encodedPolyline"
   };

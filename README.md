@@ -12,4 +12,18 @@ flutterfire configure
 
 .vscode/launch.json
 
-``
+`{
+    "configurations": [
+    {
+        "name": "Flutter",
+        "type": "dart",
+        "request": "launch",
+        "toolArgs": [
+            "--dart-define",
+            "API_KEY=XXXXXX",
+            "--dart-define",
+            "ROUTES=XXXXXXX"
+        ]
+    }
+    ]
+}`
