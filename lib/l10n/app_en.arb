@@ -1,0 +1,80 @@
+{
+  "app_name": "Carpool",
+  "start": "Start",
+  "destination": "Destination",
+  "to": "To",
+  "from": "From",
+  "when": "When",
+  "search": "Search",
+  "location_not_found": "Location not found.",
+  "next": "Next",
+  "confirm": "Confirm",
+  "confirm_route": "Confirm route",
+  "waypoint": "Waypoint {number}",
+  "@waypoint": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "add_waypoint": "Via",
+  "error": "Something went wrong.",
+  "network_error": "Error. Check your internet connection.",
+  "add_location": "Add location",
+  "add_ride": "Add ride",
+  "search_ride": "Search",
+  "my_rides": "My rides",
+  "my_profile": "My profile",
+  "route": "Route",
+  "saved_routes": "Saved routes",
+  "saved_locations": "Saved locations",
+  "waypoints_full": "Waypoints full.",
+  "choose_from_map": "Choose from map",
+  "show_on_map": "Show on map",
+  "no_saved_routes": "No saved routes.",
+  "choose_from_saved_routes": "Choose a saved route.",
+  "departure_time": "Departure time",
+  "departure_min": "Departure earliest",
+  "departure_max": "Departure latest",
+  "choose_date": "Choose date",
+  "choose_time": "Time",
+  "time_input_error": "Invalid time.",
+  "passenger_capacity": "Passenger capacity",
+  "additional_info": "Additional information",
+  "write_additional_info": "Write additional information.",
+  "seats": "Seats",
+  "sign_out": "Sign out",
+  "no_rides_found": "No rides found",
+  "as_driver": "As a driver",
+  "as_passenger": "As a passenger",
+  "requests": "Requests",
+  "history": "History",
+  "cancelled": "Cancelled",
+  "driving": "Driving",
+  "finished": "Finished",
+  "declined": "Declined",
+  "waiting": "Waiting",
+  "full": "Full",
+  "sign_in_error": "Failed to sign in.",
+  "late": "Late",
+  "reverse": "Reverse path",
+  "gps_location": "Current location",
+  "home": "Home",
+  "work": "Work",
+  "edit": "Edit",  
+  "add": "Add",
+  "delete": "Delete",
+  "location_already_added": "{location} is already added. Please choose another name.",
+  "@location_already_added": {
+    "placeholders": {
+      "location": {
+        "type": "String"
+      }
+    }
+  },
+  "route_not_found": "Route not found.",
+  "quoata_exceeded": "Request limit exceeded. Try again later",
+  "destination_error": "Rides inside a municipality is disallowed."
+
+}

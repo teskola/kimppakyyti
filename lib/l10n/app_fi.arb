@@ -1,0 +1,79 @@
+{
+  "app_name": "Kimppakyyti",
+  "start": "Lähtöpaikka",
+  "destination": "Määränpää",
+  "to": "Mihin?",
+  "from": "Mistä?",
+  "when": "Milloin?",
+  "search": "Hae",
+  "location_not_found": "Sijaintia ei löytynyt.",
+  "next": "Seuraava",
+  "confirm": "Vahvista",
+  "confirm_route": "Hyväksy reitti",
+  "waypoint": "Välietappi {number}", 
+  "@waypoint": {
+    "placeholders": {
+      "number": {
+        "type": "int"
+      }
+    }
+  },
+  "add_waypoint": "Lisää välietappi",
+  "error": "Tapahtui virhe.",
+  "network_error": "Tapahtui virhe. Tarkista internet-yhteys.",
+  "add_location": "Lisää sijainti",
+  "add_ride": "Lisää kyyti",
+  "search_ride": "Hae kyytiä",
+  "my_rides": "Omat kyydit",
+  "my_profile": "Oma profiili",
+  "route": "Reitti",
+  "saved_routes": "Tallennetut reitit",
+  "saved_locations": "Tallennetut sijainnit",
+  "waypoints_full": "Välietapit täynnä.",
+  "choose_from_map": "Valitse kartalta",
+  "show_on_map": "Näytä kartalla",
+  "no_saved_routes": "Ei tallennettuja reittejä.",
+  "choose_from_saved_routes": "Valitse tallennettu reitti.",
+  "departure_time": "Lähtöaika",
+  "departure_min": "Lähtö aikaisintaan",
+  "departure_max": "Lähtö viimeistään",
+  "choose_date": "Valitse päivämäärä",
+  "choose_time": "Aika",
+  "time_input_error": "Virheellinen aika.",
+  "passenger_capacity": "Matkustajia mahtuu",
+  "additional_info": "Lisätietoja",
+  "write_additional_info": "Kirjoita lisätietoja.",
+  "seats": "Paikkoja",
+  "sign_out": "Kirjaudu ulos",
+  "no_rides_found": "Kyytejä ei löytynyt",
+  "as_driver": "Kuljettajana",
+  "as_passenger": "Matkustajana",
+  "requests": "Pyynnöt",
+  "history": "Vanhat matkat",
+  "cancelled": "Peruttu",
+  "driving": "Matkalla",
+  "finished": "Päättynyt",
+  "declined": "Hylätty",
+  "waiting": "Odottaa",
+  "full": "Täynnä",
+  "sign_in_error": "Kirjautuminen epäonnistui.",
+  "late": "Myöhässä",
+  "reverse": "Käännä suunta",
+  "gps_location": "Nykyinen sijaintisi",
+  "home": "Koti",
+  "work": "Työpaikka",
+  "edit": "Muokkaa",  
+  "add": "Lisää",
+  "delete": "Poista",
+  "location_already_added": "{location} on jo lisätty. Valitse toinen nimi.",
+  "@location_already_added": {
+    "placeholders": {
+      "location": {
+        "type": "String"
+      }
+    }
+  },
+  "route_not_found": "Reittiä ei löytynyt.",
+  "quoata_exceeded": "Hakujen määrä ylitetty. Yritä myöhemmin uudelleen.",
+  "destination_error": "Kunnansisäiset kyydit kielletty."
+}

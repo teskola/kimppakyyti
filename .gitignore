@@ -1,0 +1,16 @@
+android/
+assets/
+build/
+.dart_tool/
+.vscode/
+.idea/
+analysis_options.yaml
+kimppakyyti.iml
+pubspec.lock
+.flutter-plugins
+.flutter-plugins-dependencies
+.metadata
+lib/firebase_options.dart
+
+!android/app/build.gradle
+!android/app/src/main/AndroidManifest.xml
