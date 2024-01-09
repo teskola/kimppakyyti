@@ -5,6 +5,7 @@ import 'package:flutter/material.dart' hide Route, DateUtils;
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:kimppakyyti/models/departure_time.dart';
+import 'package:kimppakyyti/providers/geocoder.dart';
 import 'package:kimppakyyti/utilities/map_utils.dart';
 import 'package:kimppakyyti/utilities/ride_utils.dart';
 import 'package:kimppakyyti/widgets/loading_spinner.dart';
@@ -166,16 +167,14 @@ class SearchListItemTimeField extends StatelessWidget {
 class SearchListItemTitle extends StatelessWidget {
   final Route route;
   final Deviations deviations;
-  late final Future<String> start;
-  late final Future<String> destination;
+  late final Future<String?> start;
+  late final Future<String?> destination;
   SearchListItemTitle(
       {super.key, required this.route, required this.deviations}) {
-    start = MapUtils()
-        .reverseGeoCode(coordinates: deviations.startDeviation.point)
-        .then((area) => area!.name);
-    destination = MapUtils()
-        .reverseGeoCode(coordinates: deviations.destinationDeviation.point)
-        .then((area) => area!.name);
+    start = Geocoder()
+        .reverseGeoCode(deviations.startDeviation.point);
+    destination = Geocoder()
+        .reverseGeoCode(deviations.destinationDeviation.point);
   }
 
   @override

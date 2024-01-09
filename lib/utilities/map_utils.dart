@@ -2,9 +2,7 @@ import 'dart:convert';
 import 'dart:math';
 import 'package:fixnum/fixnum.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart' show rootBundle;
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import '../models/location.dart';
 
 enum MarkerIcon {
   start,
@@ -43,14 +41,7 @@ class MapUtils {
       default:
         return BitmapDescriptor.defaultMarker;
     }
-  }  
-
-  Future<List<Area>> _getAreas() async {
-    String jsonText =
-        await rootBundle.loadString('assets/json/kuntarajat.geojson');
-    final data = jsonDecode(jsonText)['features'] as List;
-    return data.map((json) => Area.fromJson(json)).toList();
-  }
+  }    
 
   // https://stackoverflow.com/questions/27928/calculate-distance-between-two-latitude-longitude-points-haversine-formula
 
@@ -72,41 +63,7 @@ class MapUtils {
   static double _deg2rad(deg) {
     return deg * (pi / 180);
   }
-
-  Future<List<String>> getRoute(String start, String encodedRoute) async {
-    final List<String> result = [start];
-    final List<LatLng> polyline = decodePolyline(encodedRoute);
-    final List<Area> locationAreas = await _getAreas();
-    Area current =
-        locationAreas.singleWhere((element) => element.name == result.last);
-
-    for (var i = 1; i < polyline.length; i++) {
-      locationAreas.remove(current);
-      if (!current
-          .pointInArea(LatLng(polyline[i].latitude, polyline[i].longitude))) {
-        Area? location = await reverseGeoCode(
-            locationAreas: locationAreas,
-            coordinates: LatLng(polyline[i].latitude, polyline[i].longitude));
-        if (location != null) {
-          result.add(location.name);
-          current = location;
-        }
-      }
-    }
-    return result;
-  }
-
-  Future<Area?> reverseGeoCode(
-      {required LatLng coordinates, List<Area>? locationAreas}) async {
-    List<Area> locations = locationAreas ?? await _getAreas();
-    for (var location in locations) {
-      if (location.pointInArea(coordinates)) {
-        return location;
-      }
-    }
-    return null;
-  }
-
+  
   // https://github.com/Dammyololade/flutter_polyline_points/blob/master/lib/src/network_util.dart
 
   static List<LatLng> decodePolyline(String encoded) {

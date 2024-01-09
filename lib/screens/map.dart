@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart' hide Route;
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:kimppakyyti/providers/geocoder.dart';
 import 'package:kimppakyyti/utilities/error.dart';
 import 'package:kimppakyyti/utilities/local_database.dart';
 import '../models/location.dart';
@@ -380,7 +381,7 @@ class _MapPageState extends State<MapPage> {
       _changeMarkerPosition(coordinates);
     });
 
-    Area? location = await MapUtils().reverseGeoCode(coordinates: coordinates);
+    String? location = await Geocoder().reverseGeoCode(coordinates);
     setState(() {
       _isLoading = false;
     });
@@ -389,7 +390,7 @@ class _MapPageState extends State<MapPage> {
         _selected = Point(
             latitude: coordinates.latitude,
             longitude: coordinates.longitude,
-            area: location.name);
+            area: location);
       });
       _textfield.currentState!.updateTextField(_selected);
     } else {
