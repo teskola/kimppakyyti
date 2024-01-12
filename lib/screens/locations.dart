@@ -4,12 +4,11 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:kimppakyyti/providers/location.dart';
 import 'package:kimppakyyti/screens/map.dart';
 import 'package:kimppakyyti/utilities/error.dart';
-import 'package:kimppakyyti/utilities/map_utils.dart';
 import 'package:provider/provider.dart';
 
 import '../models/location.dart';
 
-enum Location { home, work, custom }
+enum LocationIcon { home, work, custom }
 
 class MyLocationsPage extends StatelessWidget {
   const MyLocationsPage({super.key});
@@ -17,8 +16,8 @@ class MyLocationsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(children: const [
-      LocationTile(Location.home),
-      LocationTile(Location.work),
+      LocationTile(LocationIcon.home),
+      LocationTile(LocationIcon.work),
       CustomList()
     ]);
   }
@@ -36,7 +35,7 @@ class CustomList extends StatelessWidget {
         physics: const ClampingScrollPhysics(),
         itemCount: count == 5 ? 5 : count + 1,
         itemBuilder: (_, index) {
-          return LocationTile(Location.custom,
+          return LocationTile(LocationIcon.custom,
               name: provider.getName(index),
               key: GlobalKey<_LocationTileState>());
         });
@@ -44,7 +43,7 @@ class CustomList extends StatelessWidget {
 }
 
 class LocationTitle extends StatelessWidget {
-  final Location location;
+  final LocationIcon location;
   final String? name;
   final TextEditingController? controller;
 
@@ -56,11 +55,11 @@ class LocationTitle extends StatelessWidget {
       return Text(name!);
     }
     switch (location) {
-      case Location.home:
+      case LocationIcon.home:
         return Text(AppLocalizations.of(context).home);
-      case Location.work:
+      case LocationIcon.work:
         return Text(AppLocalizations.of(context).work);
-      case Location.custom:
+      case LocationIcon.custom:
         return TextField(
           inputFormatters: [LengthLimitingTextInputFormatter(18)],
           decoration: InputDecoration.collapsed(
@@ -73,7 +72,7 @@ class LocationTitle extends StatelessWidget {
 }
 
 class LocationSubTitle extends StatelessWidget {
-  final Location location;
+  final LocationIcon location;
   final String? name;
 
   const LocationSubTitle(this.location, {super.key, this.name});
@@ -81,13 +80,13 @@ class LocationSubTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     switch (location) {
-      case Location.home:
+      case LocationIcon.home:
         final home = context.watch<LocationProvider>().myLocations.home;
         return home != null ? Text(home.toString()) : const SizedBox.shrink();
-      case Location.work:
+      case LocationIcon.work:
         final work = context.watch<LocationProvider>().myLocations.work;
         return work != null ? Text(work.toString()) : const SizedBox.shrink();
-      case Location.custom:
+      case LocationIcon.custom:
         final custom = context.watch<LocationProvider>().custom;
         return custom != null && custom[name] != null
             ? Text(custom[name].toString())
@@ -97,7 +96,7 @@ class LocationSubTitle extends StatelessWidget {
 }
 
 class LocationTile extends StatefulWidget {
-  final Location location;
+  final LocationIcon location;
   final String? name;
 
   const LocationTile(this.location, {super.key, this.name});
@@ -111,11 +110,11 @@ class _LocationTileState extends State<LocationTile> {
 
   IconData icon() {
     switch (widget.location) {
-      case Location.home:
+      case LocationIcon.home:
         return Icons.home;
-      case Location.work:
+      case LocationIcon.work:
         return Icons.work;
-      case Location.custom:
+      case LocationIcon.custom:
         return Icons.push_pin;
     }
   }
@@ -123,7 +122,7 @@ class _LocationTileState extends State<LocationTile> {
   @override
   void initState() {
     super.initState();
-    if (widget.location == Location.custom) {
+    if (widget.location == LocationIcon.custom) {
       controller = TextEditingController()
         ..addListener(() {
           setState(() {});
@@ -140,48 +139,48 @@ class _LocationTileState extends State<LocationTile> {
     controller?.dispose();
   }
 
+  Markers _marker(LocationIcon icon) {
+    switch (icon) {
+      case LocationIcon.home:
+        return Markers.home;
+      case LocationIcon.work:
+        return Markers.work;
+      case LocationIcon.custom:
+        return Markers.custom;
+    }
+  }
+
   Future<void> _getLocationFromMap(Point? point) async {
     final Point? result = await Navigator.push(
         context,
         MaterialPageRoute(
             builder: (_) => MapPage(
                 mode: MapMode.singlePoint,
-                marker: _marker(),
+                locationIcon: _marker(widget.location),
                 name: controller?.text,
                 initialSelection: point)));
     if (result == null) return;
     if (!context.mounted) return;
 
     switch (widget.location) {
-      case Location.home:
+      case LocationIcon.home:
         context.read<LocationProvider>().home = result;
         break;
-      case Location.work:
+      case LocationIcon.work:
         context.read<LocationProvider>().work = result;
         break;
-      case Location.custom:
+      case LocationIcon.custom:
         context.read<LocationProvider>().update(controller!.text, result);
-    }
-  }
-
-  MarkerIcon _marker() {
-    switch (widget.location) {
-      case Location.home:
-        return MarkerIcon.home;
-      case Location.work:
-        return MarkerIcon.work;
-      case Location.custom:
-        return MarkerIcon.custom;
     }
   }
 
   Point? _getPoint(LocationProvider provider) {
     switch (widget.location) {
-      case Location.home:
+      case LocationIcon.home:
         return provider.home;
-      case Location.work:
+      case LocationIcon.work:
         return provider.work;
-      case Location.custom:
+      case LocationIcon.custom:
         return provider.custom != null ? provider.custom![widget.name] : null;
     }
   }
@@ -198,17 +197,17 @@ class _LocationTileState extends State<LocationTile> {
             title: LocationTitle(widget.location,
                 name: widget.name, controller: controller),
             subtitle: LocationSubTitle(widget.location, name: widget.name),
-            trailing: (widget.location == Location.custom &&
+            trailing: (widget.location == LocationIcon.custom &&
                     controller!.text.isEmpty)
                 ? null
                 : ActionButtons(
                     widget.location,
                     name: widget.name,
-                    onEdit: () {
+                    onEdit: () => _getLocationFromMap(point),                    
+                    onAdd: () {
                       if (provider.custom != null &&
                           controller != null &&
                           provider.custom!.containsKey(controller!.text)) {
-                        // TODO: parempi error objecti
                         ErrorSnackbar.show(
                             context,
                             Error(
@@ -228,16 +227,18 @@ class _LocationTileState extends State<LocationTile> {
 }
 
 class ActionButtons extends StatelessWidget {
-  final Location location;
+  final LocationIcon location;
   final String? name;
   final void Function() onEdit;
+  final void Function() onAdd;
   final bool edit;
   const ActionButtons(
     this.location, {
     this.name,
     super.key,
     required this.onEdit,
-    required this.edit,
+    required this.edit, 
+    required this.onAdd,
   });
 
   @override
@@ -246,7 +247,7 @@ class ActionButtons extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         IconButton.filledTonal(
-            onPressed: onEdit,
+            onPressed: edit ? onEdit : onAdd,
             icon:
                 edit ? const Icon(Icons.edit_location) : const Icon(Icons.add)),
         if (edit)
@@ -256,13 +257,13 @@ class ActionButtons extends StatelessWidget {
               icon: const Icon(Icons.delete),
               onPressed: () {
                 switch (location) {
-                  case Location.home:
+                  case LocationIcon.home:
                     context.read<LocationProvider>().home = null;
                     break;
-                  case Location.work:
+                  case LocationIcon.work:
                     context.read<LocationProvider>().work = null;
                     break;
-                  case Location.custom:
+                  case LocationIcon.custom:
                     context.read<LocationProvider>().delete(name!);
                 }
               },

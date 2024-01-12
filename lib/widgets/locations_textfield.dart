@@ -184,7 +184,7 @@ class LocationsTextFieldState extends State<LocationsTextField> {
             },
             decoration: InputDecoration(
                 prefixIcon: _selectedLocation != null && !_editing
-                    ? LocationIcon(_selectedLocation!)
+                    ? SuggestionIcon(_selectedLocation!)
                     : const Icon(null),
                 border: const OutlineInputBorder(),
                 labelText: widget.label ?? _label(),
@@ -212,10 +212,10 @@ class LocationsTextFieldState extends State<LocationsTextField> {
   }
 }
 
-class LocationIcon extends StatelessWidget {
+class SuggestionIcon extends StatelessWidget {
   final Point point;
 
-  const LocationIcon(this.point, {super.key});
+  const SuggestionIcon(this.point, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -243,7 +243,7 @@ class SuggestionsListItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
         dense: true,
-        leading: LocationIcon(itemData),
+        leading: SuggestionIcon(itemData),
         title: Text(context.read<LocationProvider>().name(context, itemData)));
   }
 }

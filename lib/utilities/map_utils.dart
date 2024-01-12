@@ -4,45 +4,9 @@ import 'package:fixnum/fixnum.dart';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
-enum MarkerIcon {
-  start,
-  destination,
-  waypoint,
-  gpsLocation,
-  car,
-  home,
-  work,
-  custom
-}
-
 class MapUtils {
   static const int maxWaypoints = 2;
-
-  static Future<BitmapDescriptor> getIcon(MarkerIcon marker, ImageConfiguration config) async {
-    switch (marker) {
-      case MarkerIcon.home:
-        return await BitmapDescriptor.fromAssetImage(
-            config, 'assets/icons/home.png');
-      case MarkerIcon.custom:
-        return await BitmapDescriptor.fromAssetImage(
-            config, 'assets/icons/custom.png');
-      case MarkerIcon.work:
-        return await BitmapDescriptor.fromAssetImage(
-            config, 'assets/icons/work.png');
-      case MarkerIcon.start:
-        return await BitmapDescriptor.fromAssetImage(
-            config, 'assets/icons/start.png');
-      case MarkerIcon.destination:
-        return await BitmapDescriptor.fromAssetImage(
-            config, 'assets/icons/checkered.png');
-      case MarkerIcon.waypoint:
-        return await BitmapDescriptor.fromAssetImage(
-            config, 'assets/icons/waypoint.png');
-      default:
-        return BitmapDescriptor.defaultMarker;
-    }
-  }    
-
+     
   // https://stackoverflow.com/questions/27928/calculate-distance-between-two-latitude-longitude-points-haversine-formula
 
   static double getDistance(

@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import '../models/location.dart';
 
@@ -6,12 +8,12 @@ extension MapController on GoogleMapController {
   static const LatLng south = LatLng(59.807983, 22.913117);
   static const LatLng north = LatLng(70.092283, 27.955583);
   static const LatLng southwest = LatLng(59.807983, 19.131067);
-  static const LatLng northeast = LatLng(70.092283, 31.5867); 
+  static const LatLng northeast = LatLng(70.092283, 31.5867);
 
-  Future<void> centerToLocation(LatLng location) {
-   return animateCamera(
-        CameraUpdate.newCameraPosition(
-            CameraPosition(target: location, zoom: 10.0)));
+  Future<void> centerToLocation(LatLng location) async {
+    final zoomLevel = await getZoomLevel();
+    return animateCamera(CameraUpdate.newCameraPosition(CameraPosition(
+        target: location, zoom: max(11.0, zoomLevel))));
   }
 
   // https://stackoverflow.com/questions/55989773/how-to-zoom-between-two-google-map-markers-in-flutter

@@ -73,7 +73,7 @@ flutter:
   assets:
     - assets/json/locations.json
     - assets/json/kuntarajat.geojson
-    - assets/icons/checkered.png
+    - assets/icons/destination.png
     - assets/icons/start.png
     - assets/icons/waypoint.png
     - assets/icons/home.png

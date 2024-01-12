@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart' hide Route;
+import 'package:flutter/scheduler.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:kimppakyyti/providers/geocoder.dart';
@@ -14,6 +15,17 @@ import '../widgets/locations_textfield.dart';
 
 enum MapMode { selectRoute, endPointsOnly, singlePoint, viewOnly }
 
+enum Markers {
+  start,
+  destination,
+  waypoint,
+  gpsLocation,
+  car,
+  home,
+  work,
+  custom
+}
+
 class MapPage extends StatefulWidget {
   final Point? start;
   final Point? destination;
@@ -21,7 +33,7 @@ class MapPage extends StatefulWidget {
   final String? name;
   final List<Point>? waypoints;
   final Route? route;
-  final MarkerIcon? marker;
+  final Markers? locationIcon;
   final MapMode mode;
   final int maxWaypoints;
 
@@ -33,7 +45,7 @@ class MapPage extends StatefulWidget {
       this.route,
       this.maxWaypoints = MapUtils.maxWaypoints,
       this.mode = MapMode.selectRoute,
-      this.marker,
+      this.locationIcon,
       this.initialSelection,
       this.name});
 
@@ -48,6 +60,7 @@ class _MapPageState extends State<MapPage> {
   ];
 
   final GlobalKey<LocationsTextFieldState> _textfield = GlobalKey();
+  ImageConfiguration? _config;
   late final FocusNode _focusNode;
   late final GoogleMapController _controller;
   final List<Route> _routes = [];
@@ -58,7 +71,7 @@ class _MapPageState extends State<MapPage> {
   Point? _selected;
   final List<Point> _wayPoints = [];
   final TextEditingController _textEditingController = TextEditingController();
-  bool _isLoading = false;
+  bool _isLoading = false;  
 
   /// ### Current selection stage
   ///
@@ -73,6 +86,23 @@ class _MapPageState extends State<MapPage> {
       return 1;
     } else {
       return 2;
+    }
+  }
+
+  String _asset(Markers marker) => 'assets/icons/${marker.name}.png';
+
+  Future<BitmapDescriptor> getIcon(Markers marker) async =>
+      BitmapDescriptor.fromAssetImage(
+          _config ?? (_config = createLocalImageConfiguration(context)), _asset(marker));
+
+  Offset anchor(Markers icon) {
+    switch (icon) {
+      case Markers.custom:
+        return const Offset(0.5, 0.875);
+      case Markers.destination:
+        return const Offset(0.24, 0.83);
+      default:
+        return const Offset(0.5, 0.5);
     }
   }
 
@@ -92,23 +122,12 @@ class _MapPageState extends State<MapPage> {
     }
   }
 
-  Offset _getAnchor(MarkerIcon icon) {
-    switch (icon) {
-      case MarkerIcon.custom:
-        return const Offset(0.5, 0.875);
-      case MarkerIcon.destination:
-        return const Offset(0.24, 0.83);
-      default:
-        return const Offset(0.5, 0.5);
-    }
-  }
-
   Future<void> _setMarkerIcons() async {
-    if (widget.initialSelection != null && widget.marker != null) {
+    if (widget.initialSelection != null && widget.locationIcon != null) {
       _markers.add(Marker(
-          markerId: const MarkerId('myLocation'),
-          anchor: _getAnchor(widget.marker!),
-          icon: await MapUtils.getIcon(widget.marker!, createLocalImageConfiguration(context)),
+          markerId: MarkerId(widget.locationIcon!.name),
+          anchor: anchor(widget.locationIcon!),
+          icon: await getIcon(widget.locationIcon!),
           position: LatLng(widget.initialSelection!.latitude,
               widget.initialSelection!.longitude),
           draggable: true,
@@ -119,23 +138,23 @@ class _MapPageState extends State<MapPage> {
     if (_start != null) {
       _markers.add(Marker(
           markerId: _markerIds[0],
-          anchor: _getAnchor(MarkerIcon.start),
-          icon: await MapUtils.getIcon(MarkerIcon.start, createLocalImageConfiguration(context)),
+          anchor: anchor(Markers.start),
+          icon: await getIcon(Markers.start),
           position: LatLng(_start!.latitude, _start!.longitude)));
     }
     if (_destination != null) {
       _markers.add(Marker(
           markerId: _markerIds[1],
-          anchor: _getAnchor(MarkerIcon.destination),
-          icon: await MapUtils.getIcon(MarkerIcon.destination, createLocalImageConfiguration(context)),
+          anchor: anchor(Markers.destination),
+          icon: await getIcon(Markers.destination),
           position: LatLng(_destination!.latitude, _destination!.longitude)));
     }
 
     for (var i = 0; i < _wayPoints.length; i++) {
       _markers.add(Marker(
           markerId: MarkerId('waypoint$i'),
-          anchor: _getAnchor(MarkerIcon.waypoint),
-          icon: await MapUtils.getIcon(MarkerIcon.waypoint, createLocalImageConfiguration(context)),
+          anchor: anchor(Markers.waypoint),
+          icon: await getIcon(Markers.waypoint),
           position: LatLng(_wayPoints[i].latitude, _wayPoints[i].longitude)));
     }
   }
@@ -146,22 +165,22 @@ class _MapPageState extends State<MapPage> {
       case 0:
         _markers.add(Marker(
             markerId: _markerIds[stage],
-            anchor: _getAnchor(MarkerIcon.start),
-            icon: await MapUtils.getIcon(MarkerIcon.start, createLocalImageConfiguration(context)),
+            anchor: anchor(Markers.start),
+            icon: await getIcon(Markers.start),
             position: LatLng(selected.latitude, selected.longitude)));
         break;
       case 1:
         _markers.add(Marker(
             markerId: _markerIds[stage],
-            anchor: _getAnchor(MarkerIcon.destination),
-            icon: await MapUtils.getIcon(MarkerIcon.destination, createLocalImageConfiguration(context)),
+            anchor: anchor(Markers.destination),
+            icon: await getIcon(Markers.destination),
             position: LatLng(selected.latitude, selected.longitude)));
         break;
       case 2:
         _markers.add(Marker(
             markerId: MarkerId('waypoint${_wayPoints.length}'),
-            anchor: _getAnchor(MarkerIcon.waypoint),
-            icon: await MapUtils.getIcon(MarkerIcon.waypoint, createLocalImageConfiguration(context)),
+            anchor: anchor(Markers.waypoint),
+            icon: await getIcon(Markers.waypoint),
             position: LatLng(selected.latitude, selected.longitude)));
         break;
       default:
@@ -179,15 +198,15 @@ class _MapPageState extends State<MapPage> {
         : marker.markerId == MarkerId('waypoint${_wayPoints.length}'));
   }
 
-  void _changeMarkerPosition(LatLng newPosition) async {
+  Future<void> _changeMarkerPosition(LatLng newPosition) async {
     final currentStage = stage;
     final currentWaypointCount = _wayPoints.length;
     _removeMarker();
     if (widget.mode == MapMode.singlePoint) {
       _markers.add(Marker(
-          markerId: const MarkerId('myLocation'),
-          anchor: _getAnchor(widget.marker!),
-          icon: await MapUtils.getIcon(widget.marker!, createLocalImageConfiguration(context)),
+          markerId: MarkerId(widget.locationIcon!.name),
+          anchor: anchor(widget.locationIcon!),
+          icon: await getIcon(widget.locationIcon!),
           position: newPosition,
           draggable: true,
           onDragEnd: (coordinates) => _onLocationSelectedFromMap(coordinates)));
@@ -376,6 +395,8 @@ class _MapPageState extends State<MapPage> {
 
   Future<void> _onLocationSelectedFromMap(LatLng coordinates) async {
     _focusNode.unfocus();
+    _controller.centerToLocation(coordinates);
+
     setState(() {
       _isLoading = true;
       _changeMarkerPosition(coordinates);
@@ -438,10 +459,10 @@ class _MapPageState extends State<MapPage> {
   }
 
   String? _label() {
-    switch (widget.marker) {
-      case MarkerIcon.home:
+    switch (widget.locationIcon) {
+      case Markers.home:
         return AppLocalizations.of(context).home;
-      case MarkerIcon.work:
+      case Markers.work:
         return AppLocalizations.of(context).work;
       default:
         return widget.name;
@@ -472,7 +493,7 @@ class _MapPageState extends State<MapPage> {
           _wayPoints.addAll(widget.waypoints!);
         }
       }
-    }
+    }    
   }
 
   @override
@@ -508,7 +529,6 @@ class _MapPageState extends State<MapPage> {
             ),
             onMapCreated: (mapCon) async {
               await _onMapCreated(mapCon);
-              // await Future.delayed(const Duration(milliseconds: 200));
               final initial = widget.initialSelection;
               if (initial != null) {
                 _controller.centerToLocation(
