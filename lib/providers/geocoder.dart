@@ -36,22 +36,23 @@ class Geocoder {
 
   // https://gist.github.com/vlasky/d0d1d97af30af3191fc214beaf379acc
 
-  double _cross(LatLng x, LatLng y, LatLng z) {
+  static double _isLeft(LatLng x, LatLng y, LatLng z) {
     return (y.latitude - x.latitude) * (z.longitude - x.longitude) -
         (z.latitude - x.latitude) * (y.longitude - x.longitude);
   }
 
-  bool pointInPolygon(LatLng point, List<LatLng> polygon) {
-    int wn = 0;
+  static bool pointInPolygon(LatLng point, List<LatLng> polygon) {
+    var wn = 0;
     for (var i = 0; i < polygon.length; i++) {
-      final LatLng b = polygon[(i + 1) % polygon.length];
+      var b = polygon[(i + 1) % polygon.length];
       if (polygon[i].longitude <= point.longitude) {
-        if (b.longitude > point.longitude && _cross(polygon[i], b, point) > 0) {
-          wn += 1;
+        if (b.longitude > point.longitude &&
+            _isLeft(polygon[i], b, point) > 0) {
+          wn++;
         }
       } else if (b.longitude <= point.longitude &&
-          _cross(polygon[i], b, point) < 0) {
-        wn -= 1;
+          _isLeft(polygon[i], b, point) < 0) {
+        wn--;
       }
     }
     return wn != 0;

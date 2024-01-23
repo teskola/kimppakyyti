@@ -77,14 +77,14 @@ class RideUtils {
   }
 
   static String rideString(Route route, {String? start, String? destination}) {
-    List<String> locations = [route.start.area];
-    if (start != null && route.start.area != start) {
+    List<String> locations = [route.start.municipality];
+    if (start != null && route.start.municipality != start) {
       locations.add(start);
     }
-    if (destination != null && route.destination.area != destination) {
+    if (destination != null && route.destination.municipality != destination) {
       locations.add(destination);
     }
-    locations.add(route.destination.area);
+    locations.add(route.destination.municipality);
     return locations.join("—");
   }
 }

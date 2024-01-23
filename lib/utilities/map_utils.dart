@@ -28,7 +28,7 @@ class MapUtils {
     return deg * (pi / 180);
   }
   
-  // https://github.com/Dammyololade/flutter_polyline_points/blob/master/lib/src/network_util.dart
+// https://github.com/Dammyololade/flutter_polyline_points/blob/master/lib/src/utils/polyline_decoder.dart
 
   static List<LatLng> decodePolyline(String encoded) {
     List<LatLng> points = [];
@@ -120,28 +120,5 @@ class MapUtils {
       output += _encode(a.longitude, b.longitude, factor);
     }
     return output;
-  }
-
-  // https://gist.github.com/vlasky/d0d1d97af30af3191fc214beaf379acc
-
-  static double _cross(final LatLng x, final LatLng y, final LatLng z) {
-    return (y.latitude - x.latitude) * (z.longitude - x.longitude) -
-        (z.latitude - x.latitude) * (y.longitude - x.longitude);
-  }
-
-  static bool pointInPolygon(final LatLng point, final List<LatLng> polygon) {
-    int wn = 0;
-    for (var i = 0; i < polygon.length; i++) {
-      final LatLng b = polygon[(i + 1) % polygon.length];
-      if (polygon[i].longitude <= point.longitude) {
-        if (b.longitude > point.longitude && _cross(polygon[i], b, point) > 0) {
-          wn += 1;
-        }
-      } else if (b.longitude <= point.longitude &&
-          _cross(polygon[i], b, point) < 0) {
-        wn -= 1;
-      }
-    }
-    return wn != 0;
-  }
+  } 
 }

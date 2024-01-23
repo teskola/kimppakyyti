@@ -71,7 +71,7 @@ class _MapPageState extends State<MapPage> {
   Point? _selected;
   final List<Point> _wayPoints = [];
   final TextEditingController _textEditingController = TextEditingController();
-  bool _isLoading = false;  
+  bool _isLoading = false;
 
   /// ### Current selection stage
   ///
@@ -93,7 +93,8 @@ class _MapPageState extends State<MapPage> {
 
   Future<BitmapDescriptor> getIcon(Markers marker) async =>
       BitmapDescriptor.fromAssetImage(
-          _config ?? (_config = createLocalImageConfiguration(context)), _asset(marker));
+          _config ?? (_config = createLocalImageConfiguration(context)),
+          _asset(marker));
 
   Offset anchor(Markers icon) {
     switch (icon) {
@@ -309,7 +310,7 @@ class _MapPageState extends State<MapPage> {
       case 1:
         if (widget.mode == MapMode.selectRoute ||
             widget.mode == MapMode.viewOnly) {
-          if (_selected?.area != _start?.area) {
+          if (_selected?.municipality != _start?.municipality) {
             _addRouteAndDrawLine(_start, _selected, _wayPoints);
           } else {
             ErrorSnackbar.show(context,
@@ -411,7 +412,7 @@ class _MapPageState extends State<MapPage> {
         _selected = Point(
             latitude: coordinates.latitude,
             longitude: coordinates.longitude,
-            area: location);
+            municipality: location);
       });
       _textfield.currentState!.updateTextField(_selected);
     } else {
@@ -493,7 +494,7 @@ class _MapPageState extends State<MapPage> {
           _wayPoints.addAll(widget.waypoints!);
         }
       }
-    }    
+    }
   }
 
   @override
@@ -526,7 +527,17 @@ class _MapPageState extends State<MapPage> {
             initialCameraPosition: const CameraPosition(
               target: MapController.centerOfFinland,
               zoom: 4.85,
-            ),
+            ),            
+            cameraTargetBounds: CameraTargetBounds(LatLngBounds(
+                southwest: MapController.southwest,
+                northeast: MapController.northeast)),
+            mapToolbarEnabled: false,
+            rotateGesturesEnabled: false,
+            compassEnabled: false,
+            myLocationButtonEnabled: false,
+            buildingsEnabled: false,
+            markers: _markers,
+            polylines: _polylines,
             onMapCreated: (mapCon) async {
               await _onMapCreated(mapCon);
               final initial = widget.initialSelection;
@@ -539,16 +550,6 @@ class _MapPageState extends State<MapPage> {
               }
               setState(() {});
             },
-            cameraTargetBounds: CameraTargetBounds(LatLngBounds(
-                southwest: MapController.southwest,
-                northeast: MapController.northeast)),
-            mapToolbarEnabled: false,
-            rotateGesturesEnabled: false,
-            compassEnabled: false,
-            myLocationButtonEnabled: false,
-            buildingsEnabled: false,
-            markers: _markers,
-            polylines: _polylines,
             onTap: widget.mode == MapMode.viewOnly ||
                     (widget.mode == MapMode.endPointsOnly &&
                         _destination != null)

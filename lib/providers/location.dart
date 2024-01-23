@@ -44,7 +44,7 @@ class LocationProvider extends DatabaseProvider with ChangeNotifier {
     _getCityCenters();
     _getMyLocationsFromLocal();
     _obtainSharedPreferences();
-      }
+  }
 
   String? getName(int index) {
     if (myLocations.custom == null || myLocations.custom!.length < index + 1) {
@@ -110,7 +110,7 @@ class LocationProvider extends DatabaseProvider with ChangeNotifier {
           .firstWhere((element) => element.value == point)
           .key;
     }
-    return point.area;
+    return point.municipality;
   }
 
   Future<void> _getMyLocationsFromLocal() async {

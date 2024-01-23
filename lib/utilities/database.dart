@@ -49,11 +49,11 @@ var reversed = route.reversed;
     String? result;
     await FirebaseDatabase.instance.ref().update(values).then((_) {
       LocalDatabase().addRide(Id(driver: uid, ride: rideKey!), route.local, reversed: reversed);
-      result = rideKey;
+result = rideKey;
     }).catchError((err) {
       onError(err);
-      result = null;
+result = null;
     });
-    return result;
+return result;
   }
 }

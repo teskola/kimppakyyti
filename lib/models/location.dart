@@ -1,4 +1,5 @@
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:kimppakyyti/providers/geocoder.dart';
 import 'package:kimppakyyti/utilities/map_utils.dart';
 
 class MyLocations {
@@ -41,7 +42,7 @@ class NamedPoint extends Point {
       {required this.name,
       required super.latitude,
       required super.longitude,
-      required super.area});
+      required super.municipality});
 
   @override
   String get id => name;
@@ -51,7 +52,7 @@ class NamedPoint extends Point {
         name: name,
         latitude: point.latitude,
         longitude: point.longitude,
-        area: point.area);
+        municipality: point.municipality);
   }
 }
 
@@ -62,14 +63,14 @@ extension DoubleRounding on double {
 class Point {
   late final double latitude;
   late final double longitude;
-  final String area;
+  final String municipality;
 
-  String get id => area;
+  String get id => municipality;
 
   Point(
       {required double latitude,
       required double longitude,
-      required this.area}) {
+      required this.municipality}) {
     this.latitude = latitude.toPrecision(6);
     this.longitude = longitude.toPrecision(6);
   }
@@ -78,11 +79,11 @@ class Point {
     return Point(
         longitude: json['longitude'] as double,
         latitude: json['latitude'] as double,
-        area: json['area'] as String);
+        municipality: json['municipality'] as String);
   }
 
   Map<String, Object?> toJson() => {
-        'area': area,
+        'municipality': municipality,
         'longitude': longitude,
         'latitude': latitude,
       };
@@ -97,14 +98,14 @@ class Point {
   bool operator ==(covariant Point other) =>
       other.latitude == latitude &&
       other.longitude == longitude &&
-      other.area == area;
+      other.municipality == municipality;
 
   @override
-  int get hashCode => Object.hash(latitude, longitude, area);
+  int get hashCode => Object.hash(latitude, longitude, municipality);
 
   @override
   String toString() {
-    return '$area\n[${latitude.toStringAsFixed(3)}, ${longitude.toStringAsFixed(3)}]';
+    return '$municipality\n[${latitude.toStringAsFixed(3)}, ${longitude.toStringAsFixed(3)}]';
   }
 }
 
@@ -158,11 +159,11 @@ class Poly {
         holes: holesList.isNotEmpty ? holesList : null);
   }
 
-  bool pointInPolygon(final LatLng point) {
-    if (MapUtils.pointInPolygon(point, polygon)) {
+  bool pointInPolygon(LatLng point) {
+    if (Geocoder.pointInPolygon(point, polygon)) {
       if (holes != null) {
         for (var hole in holes!) {
-          if (MapUtils.pointInPolygon(point, hole)) {
+          if (Geocoder.pointInPolygon(point, hole)) {
             return false;
           }
         }

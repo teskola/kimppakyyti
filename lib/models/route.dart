@@ -52,7 +52,7 @@ class Leg {
 class CustomRoute extends Route {
   final int local;
   String? name;
-String? firebase;
+  String? firebase;
   final bool reversed;
   CustomRoute(super.legs, this.local,
       {this.name, this.firebase, this.reversed = false});
@@ -83,8 +83,11 @@ class Route {
     return values.fold(0, (previousValue, element) => previousValue + element);
   }
 
-  List<String> get locations =>
-      [start.area, ...waypoints.map((e) => e.area), destination.area];
+  List<String> get locations => [
+        start.municipality,
+        ...waypoints.map((e) => e.municipality),
+        destination.municipality
+      ];
 
   List<Point> get waypoints {
     if (legs.length < 2) {
@@ -102,7 +105,7 @@ class Route {
         .toList(growable: false)
         .reversed
         .toList(growable: false);
-      }
+  }
 
   @override
   bool operator ==(covariant Route other) => listEquals(legs, other.legs);

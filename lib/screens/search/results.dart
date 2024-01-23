@@ -108,30 +108,20 @@ class _SearchResultsPageState extends State<SearchResultsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text(AppLocalizations.of(context).app_name)),
-      body: SafeArea(child: LayoutBuilder(
-        builder: (context, _) {
-          if (_isLoading && _results.isEmpty) {
-            return const LoadingSpinner();
-          }
-          if (_results.isEmpty) {
-            return Center(
-              child: Text(AppLocalizations.of(context).no_rides_found),
-            );
-          } else {
-            return ListView.separated(
-              itemCount: _results.length,
-              itemBuilder: ((_, index) {
-                return SearchListItem(_results[index], onTap: () {});
-              }),
-              separatorBuilder: (_, __) {
-                return const Divider();
-              },
-            );
-          }
-        },
-      )),
-    );
+        appBar: AppBar(title: Text(AppLocalizations.of(context).app_name)),
+        body: SafeArea(
+          child: _results.isEmpty
+              ? (_isLoading
+                  ? const LoadingSpinner()
+                  : Center(
+                      child: Text(AppLocalizations.of(context).no_rides_found),
+                    ))
+              : ListView.separated(
+                  itemCount: _results.length,
+                  itemBuilder: ((_, index) =>
+                      SearchListItem(_results[index], onTap: () {})),
+                  separatorBuilder: (_, __) => const Divider()),
+        ));
   }
 }
 
@@ -171,10 +161,9 @@ class SearchListItemTitle extends StatelessWidget {
   late final Future<String?> destination;
   SearchListItemTitle(
       {super.key, required this.route, required this.deviations}) {
-    start = Geocoder()
-        .reverseGeoCode(deviations.startDeviation.point);
-    destination = Geocoder()
-        .reverseGeoCode(deviations.destinationDeviation.point);
+    start = Geocoder().reverseGeoCode(deviations.startDeviation.point);
+    destination =
+        Geocoder().reverseGeoCode(deviations.destinationDeviation.point);
   }
 
   @override
@@ -216,8 +205,8 @@ class SearchListItem extends StatelessWidget {
       child: ListTile(
         title:
             SearchListItemTitle(route: data.route, deviations: data.deviations),
-        subtitle:
-            SearchListItemTimeField(driverId: data.driverId, rideId: data.rideId),
+        subtitle: SearchListItemTimeField(
+            driverId: data.driverId, rideId: data.rideId),
         trailing:
             SearchListItemStatus(driverId: data.driverId, rideId: data.rideId),
         onTap: onTap,

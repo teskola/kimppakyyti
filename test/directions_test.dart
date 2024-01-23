@@ -6,17 +6,15 @@ import 'package:kimppakyyti/utilities/error.dart';
 
 void main() {
   final Point tampere =
-      Point(latitude: 61.497815, longitude: 23.762265, area: "Tampere");
+      Point(latitude: 61.497815, longitude: 23.762265, municipality: "Tampere");
   final Point helsinki =
-      Point(latitude: 60.17116, longitude: 24.93258, area: "Helsinki");
+      Point(latitude: 60.17116, longitude: 24.93258, municipality: "Helsinki");
   final Point forssa =
-      Point(latitude: 60.824104, longitude: 23.587275, area: "Forssa");
+      Point(latitude: 60.824104, longitude: 23.587275, municipality: "Forssa");
   final Point vantaa =
-      Point(latitude: 60.289348, longitude: 25.029676, area: "Vantaa");
+      Point(latitude: 60.289348, longitude: 25.029676, municipality: "Vantaa");
   final Point ocean =
-      Point(area: "Unknown", latitude: 72.88435, longitude: 20.284394);
-
-  
+      Point(municipality: "Unknown", latitude: 72.88435, longitude: 20.284394);
 
   /* group("Encoding/Decoding", () {
     Route original = DirectionsProvider.parseJsonToRoute(

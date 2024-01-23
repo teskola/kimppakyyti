@@ -1,1546 +1,1546 @@
 {"locations":[
   {
-    "area": "Akaa",
+    "municipality": "Akaa",
     "latitude": 61.167408,
     "longitude": 23.867642
   },
   {
-    "area": "Alajärvi",
+    "municipality": "Alajärvi",
     "latitude": 63.00285,
     "longitude": 23.803185
   },
   {
-    "area": "Alavieska",
+    "municipality": "Alavieska",
     "latitude": 64.158003,
     "longitude": 24.299759
   },
   {
-    "area": "Alavus",
+    "municipality": "Alavus",
     "latitude": 62.586607,
     "longitude": 23.617282
   },
   {
-    "area": "Asikkala",
+    "municipality": "Asikkala",
     "latitude": 61.172331,
     "longitude": 25.538409
   },
   {
-    "area": "Askola",
+    "municipality": "Askola",
     "latitude": 60.526205,
     "longitude": 25.591785
   },
   {
-    "area": "Aura",
+    "municipality": "Aura",
     "latitude": 60.655292,
     "longitude": 22.593584
   },
   {
-    "area": "Brändö",
+    "municipality": "Brändö",
     "latitude": 60.41338,
     "longitude": 21.044081
   },
   {
-    "area": "Eckerö",
+    "municipality": "Eckerö",
     "latitude": 60.21344,
     "longitude": 19.626181
   },
   {
-    "area": "Enonkoski",
+    "municipality": "Enonkoski",
     "latitude": 62.091052,
     "longitude": 28.922629
   },
   {
-    "area": "Enontekiö",
+    "municipality": "Enontekiö",
     "latitude": 68.385909,
     "longitude": 23.60561
   },
   {
-    "area": "Espoo",
+    "municipality": "Espoo",
     "latitude": 60.20678,
     "longitude": 24.65578
   },
   {
-    "area": "Eura",
+    "municipality": "Eura",
     "latitude": 61.131415,
     "longitude": 22.14648
   },
   {
-    "area": "Eurajoki",
+    "municipality": "Eurajoki",
     "latitude": 61.203184,
     "longitude": 21.738904
   },
   {
-    "area": "Evijärvi",
+    "municipality": "Evijärvi",
     "latitude": 63.362182,
     "longitude": 23.459548
   },
   {
-    "area": "Finström",
+    "municipality": "Finström",
     "latitude": 60.229252,
     "longitude": 19.98921
   },
   {
-    "area": "Forssa",
+    "municipality": "Forssa",
     "latitude": 60.824104,
     "longitude": 23.587275
   },
   {
-    "area": "Föglö",
+    "municipality": "Föglö",
     "latitude": 60.03001,
     "longitude": 20.38789
   },
   {
-    "area": "Geta",
+    "municipality": "Geta",
     "latitude": 60.375191,
     "longitude": 19.848301
   },
   {
-    "area": "Haapajärvi",
+    "municipality": "Haapajärvi",
     "latitude": 63.745705,
     "longitude": 25.335395
   },
   {
-    "area": "Haapavesi",
+    "municipality": "Haapavesi",
     "latitude": 64.1409,
     "longitude": 25.367871
   },
   {
-    "area": "Hailuoto",
+    "municipality": "Hailuoto",
     "latitude": 65.0132,
     "longitude": 24.728905
   },
   {
-    "area": "Halsua",
+    "municipality": "Halsua",
     "latitude": 63.465301,
     "longitude": 24.165394
   },
   {
-    "area": "Hamina",
+    "municipality": "Hamina",
     "latitude": 60.570992,
     "longitude": 27.189425
   },
   {
-    "area": "Hammarland",
+    "municipality": "Hammarland",
     "latitude": 60.216461,
     "longitude": 19.73711
   },
   {
-    "area": "Hankasalmi",
+    "municipality": "Hankasalmi",
     "latitude": 62.396007,
     "longitude": 26.43071
   },
   {
-    "area": "Hanko",
+    "municipality": "Hanko",
     "latitude": 59.82332,
     "longitude": 22.96822
   },
   {
-    "area": "Harjavalta",
+    "municipality": "Harjavalta",
     "latitude": 61.31049,
     "longitude": 22.11737
   },
   {
-    "area": "Hartola",
+    "municipality": "Hartola",
     "latitude": 61.58064,
     "longitude": 26.00777
   },
   {
-    "area": "Hattula",
+    "municipality": "Hattula",
     "latitude": 61.05386,
     "longitude": 24.37172
   },
   {
-    "area": "Hausjärvi",
+    "municipality": "Hausjärvi",
     "latitude": 60.7889,
     "longitude": 25.020735
   },
   {
-    "area": "Heinola",
+    "municipality": "Heinola",
     "latitude": 61.202291,
     "longitude": 26.036436
   },
   {
-    "area": "Heinävesi",
+    "municipality": "Heinävesi",
     "latitude": 62.423315,
     "longitude": 28.624105
   },
   {
-    "area": "Helsinki",
+    "municipality": "Helsinki",
     "latitude": 60.17116,
     "longitude": 24.93258
   },
   {
-    "area": "Hirvensalmi",
+    "municipality": "Hirvensalmi",
     "latitude": 61.646105,
     "longitude": 26.772059
   },
   {
-    "area": "Hollola",
+    "municipality": "Hollola",
     "latitude": 60.985714,
     "longitude": 25.537673
   },
   {
-    "area": "Huittinen",
+    "municipality": "Huittinen",
     "latitude": 61.188817,
     "longitude": 22.688858
   },
   {
-    "area": "Humppila",
+    "municipality": "Humppila",
     "latitude": 60.933793,
     "longitude": 23.36465
   },
   {
-    "area": "Hyrynsalmi",
+    "municipality": "Hyrynsalmi",
     "latitude": 64.67933,
     "longitude": 28.48336
   },
   {
-    "area": "Hyvinkää",
+    "municipality": "Hyvinkää",
     "latitude": 60.629295,
     "longitude": 24.8574
   },
   {
-    "area": "Hämeenkyrö",
+    "municipality": "Hämeenkyrö",
     "latitude": 61.653732,
     "longitude": 23.175646
   },
   {
-    "area": "Hämeenlinna",
+    "municipality": "Hämeenlinna",
     "latitude": 60.996895,
     "longitude": 24.466265
   },
   {
-    "area": "Ii",
+    "municipality": "Ii",
     "latitude": 65.322485,
     "longitude": 25.377725
   },
   {
-    "area": "Iisalmi",
+    "municipality": "Iisalmi",
     "latitude": 63.55664,
     "longitude": 27.19146
   },
   {
-    "area": "Iitti",
+    "municipality": "Iitti",
     "latitude": 60.8942,
     "longitude": 26.33842
   },
   {
-    "area": "Ikaalinen",
+    "municipality": "Ikaalinen",
     "latitude": 61.761652,
     "longitude": 23.069712
   },
   {
-    "area": "Ilmajoki",
+    "municipality": "Ilmajoki",
     "latitude": 62.72764,
     "longitude": 22.58856
   },
   {
-    "area": "Ilomantsi",
+    "municipality": "Ilomantsi",
     "latitude": 62.666899,
     "longitude": 30.937516
   },
   {
-    "area": "Imatra",
+    "municipality": "Imatra",
     "latitude": 61.213404,
     "longitude": 28.825477
   },
   {
-    "area": "Inari",
+    "municipality": "Inari",
     "latitude": 68.906185,
     "longitude": 27.027515
   },
   {
-    "area": "Inkoo",
+    "municipality": "Inkoo",
     "latitude": 60.04602,
     "longitude": 24.005355
   },
   {
-    "area": "Isojoki",
+    "municipality": "Isojoki",
     "latitude": 62.114536,
     "longitude": 21.957375
   },
   {
-    "area": "Isokyrö",
+    "municipality": "Isokyrö",
     "latitude": 62.998262,
     "longitude": 22.320665
   },
   {
-    "area": "Janakkala",
+    "municipality": "Janakkala",
     "latitude": 60.920625,
     "longitude": 24.649785
   },
   {
-    "area": "Joensuu",
+    "municipality": "Joensuu",
     "latitude": 62.604225,
     "longitude": 29.759265
   },
   {
-    "area": "Jokioinen",
+    "municipality": "Jokioinen",
     "latitude": 60.791253,
     "longitude": 23.498402
   },
   {
-    "area": "Jomala",
+    "municipality": "Jomala",
     "latitude": 60.15871,
     "longitude": 19.943541
   },
   {
-    "area": "Joroinen",
+    "municipality": "Joroinen",
     "latitude": 62.182461,
     "longitude": 27.820605
   },
   {
-    "area": "Joutsa",
+    "municipality": "Joutsa",
     "latitude": 61.742449,
     "longitude": 26.115608
   },
   {
-    "area": "Juuka",
+    "municipality": "Juuka",
     "latitude": 63.24358,
     "longitude": 29.255269
   },
   {
-    "area": "Juupajoki",
+    "municipality": "Juupajoki",
     "latitude": 61.797221,
     "longitude": 24.435872
   },
   {
-    "area": "Juva",
+    "municipality": "Juva",
     "latitude": 61.894588,
     "longitude": 27.866609
   },
   {
-    "area": "Jyväskylä",
+    "municipality": "Jyväskylä",
     "latitude": 62.24049,
     "longitude": 25.751295
   },
   {
-    "area": "Jämijärvi",
+    "municipality": "Jämijärvi",
     "latitude": 61.822029,
     "longitude": 22.686075
   },
   {
-    "area": "Jämsä",
+    "municipality": "Jämsä",
     "latitude": 61.865018,
     "longitude": 25.176749
   },
   {
-    "area": "Järvenpää",
+    "municipality": "Järvenpää",
     "latitude": 60.471294,
     "longitude": 25.089955
   },
   {
-    "area": "Kaarina",
+    "municipality": "Kaarina",
     "latitude": 60.41014,
     "longitude": 22.384209
   },
   {
-    "area": "Kaavi",
+    "municipality": "Kaavi",
     "latitude": 62.97441,
     "longitude": 28.486644
   },
   {
-    "area": "Kajaani",
+    "municipality": "Kajaani",
     "latitude": 64.225305,
     "longitude": 27.729545
   },
   {
-    "area": "Kalajoki",
+    "municipality": "Kalajoki",
     "latitude": 64.259436,
     "longitude": 23.944601
   },
   {
-    "area": "Kangasala",
+    "municipality": "Kangasala",
     "latitude": 61.463485,
     "longitude": 24.0735
   },
   {
-    "area": "Kangasniemi",
+    "municipality": "Kangasniemi",
     "latitude": 62.005273,
     "longitude": 26.647527
   },
   {
-    "area": "Kankaanpää",
+    "municipality": "Kankaanpää",
     "latitude": 61.80307,
     "longitude": 22.39508
   },
   {
-    "area": "Kannonkoski",
+    "municipality": "Kannonkoski",
     "latitude": 62.97855,
     "longitude": 25.2664
   },
   {
-    "area": "Kannus",
+    "municipality": "Kannus",
     "latitude": 63.903475,
     "longitude": 23.923265
   },
   {
-    "area": "Karijoki",
+    "municipality": "Karijoki",
     "latitude": 62.305767,
     "longitude": 21.699507
   },
   {
-    "area": "Karkkila",
+    "municipality": "Karkkila",
     "latitude": 60.534325,
     "longitude": 24.226075
   },
   {
-    "area": "Karstula",
+    "municipality": "Karstula",
     "latitude": 62.881293,
     "longitude": 24.799977
   },
   {
-    "area": "Karvia",
+    "municipality": "Karvia",
     "latitude": 62.14048,
     "longitude": 22.56376
   },
   {
-    "area": "Kaskinen",
+    "municipality": "Kaskinen",
     "latitude": 62.380215,
     "longitude": 21.238619
   },
   {
-    "area": "Kauhajoki",
+    "municipality": "Kauhajoki",
     "latitude": 62.454823,
     "longitude": 22.213747
   },
   {
-    "area": "Kauhava",
+    "municipality": "Kauhava",
     "latitude": 63.105971,
     "longitude": 23.057789
   },
   {
-    "area": "Kauniainen",
+    "municipality": "Kauniainen",
     "latitude": 60.211642,
     "longitude": 24.729048
   },
   {
-    "area": "Kaustinen",
+    "municipality": "Kaustinen",
     "latitude": 63.547708,
     "longitude": 23.693802
   },
   {
-    "area": "Keitele",
+    "municipality": "Keitele",
     "latitude": 63.178253,
     "longitude": 26.341063
   },
   {
-    "area": "Kemi",
+    "municipality": "Kemi",
     "latitude": 65.736605,
     "longitude": 24.567065
   },
   {
-    "area": "Kemijärvi",
+    "municipality": "Kemijärvi",
     "latitude": 66.718941,
     "longitude": 27.389046
   },
   {
-    "area": "Keminmaa",
+    "municipality": "Keminmaa",
     "latitude": 65.795675,
     "longitude": 24.52772
   },
   {
-    "area": "Kemiönsaari",
+    "municipality": "Kemiönsaari",
     "latitude": 60.16945,
     "longitude": 22.73735
   },
   {
-    "area": "Kempele",
+    "municipality": "Kempele",
     "latitude": 64.912102,
     "longitude": 25.507429
   },
   {
-    "area": "Kerava",
+    "municipality": "Kerava",
     "latitude": 60.401685,
     "longitude": 25.128357
   },
   {
-    "area": "Keuruu",
+    "municipality": "Keuruu",
     "latitude": 62.259475,
     "longitude": 24.696065
   },
   {
-    "area": "Kihniö",
+    "municipality": "Kihniö",
     "latitude": 62.198965,
     "longitude": 23.189565
   },
   {
-    "area": "Kinnula",
+    "municipality": "Kinnula",
     "latitude": 63.368945,
     "longitude": 24.974996
   },
   {
-    "area": "Kirkkonummi",
+    "municipality": "Kirkkonummi",
     "latitude": 60.12315,
     "longitude": 24.441655
   },
   {
-    "area": "Kitee",
+    "municipality": "Kitee",
     "latitude": 62.103875,
     "longitude": 30.135511
   },
   {
-    "area": "Kittilä",
+    "municipality": "Kittilä",
     "latitude": 67.65684,
     "longitude": 24.9084
   },
   {
-    "area": "Kiuruvesi",
+    "municipality": "Kiuruvesi",
     "latitude": 63.65175,
     "longitude": 26.61161
   },
   {
-    "area": "Kivijärvi",
+    "municipality": "Kivijärvi",
     "latitude": 63.119735,
     "longitude": 25.081655
   },
   {
-    "area": "Kokemäki",
+    "municipality": "Kokemäki",
     "latitude": 61.255985,
     "longitude": 22.346685
   },
   {
-    "area": "Kokkola",
+    "municipality": "Kokkola",
     "latitude": 63.838455,
     "longitude": 23.13003
   },
   {
-    "area": "Kolari",
+    "municipality": "Kolari",
     "latitude": 67.33146,
     "longitude": 23.7829
   },
   {
-    "area": "Konnevesi",
+    "municipality": "Konnevesi",
     "latitude": 62.621835,
     "longitude": 26.267955
   },
   {
-    "area": "Kontiolahti",
+    "municipality": "Kontiolahti",
     "latitude": 62.76317,
     "longitude": 29.847251
   },
   {
-    "area": "Korsnäs",
+    "municipality": "Korsnäs",
     "latitude": 62.78509,
     "longitude": 21.18869
   },
   {
-    "area": "Koski Tl",
+    "municipality": "Koski Tl",
     "latitude": 60.65668,
     "longitude": 23.135345
   },
   {
-    "area": "Kotka",
+    "municipality": "Kotka",
     "latitude": 60.46631,
     "longitude": 26.946485
   },
   {
-    "area": "Kouvola",
+    "municipality": "Kouvola",
     "latitude": 60.871255,
     "longitude": 26.703185
   },
   {
-    "area": "Kristiinankaupunki",
+    "municipality": "Kristiinankaupunki",
     "latitude": 62.271923,
     "longitude": 21.394115
   },
   {
-    "area": "Kruunupyy",
+    "municipality": "Kruunupyy",
     "latitude": 63.731035,
     "longitude": 23.03892
   },
   {
-    "area": "Kuhmo",
+    "municipality": "Kuhmo",
     "latitude": 64.121605,
     "longitude": 29.50632
   },
   {
-    "area": "Kuhmoinen",
+    "municipality": "Kuhmoinen",
     "latitude": 61.564801,
     "longitude": 25.178958
   },
   {
-    "area": "Kumlinge",
+    "municipality": "Kumlinge",
     "latitude": 60.314054,
     "longitude": 20.704044
   },
   {
-    "area": "Kuopio",
+    "municipality": "Kuopio",
     "latitude": 62.89313,
     "longitude": 27.676125
   },
   {
-    "area": "Kuortane",
+    "municipality": "Kuortane",
     "latitude": 62.808785,
     "longitude": 23.513745
   },
   {
-    "area": "Kurikka",
+    "municipality": "Kurikka",
     "latitude": 62.622079,
     "longitude": 22.390229
   },
   {
-    "area": "Kustavi",
+    "municipality": "Kustavi",
     "latitude": 60.545117,
     "longitude": 21.356268
   },
   {
-    "area": "Kuusamo",
+    "municipality": "Kuusamo",
     "latitude": 65.977665,
     "longitude": 29.17215
   },
   {
-    "area": "Kyyjärvi",
+    "municipality": "Kyyjärvi",
     "latitude": 63.044776,
     "longitude": 24.558774
   },
   {
-    "area": "Kärkölä",
+    "municipality": "Kärkölä",
     "latitude": 60.87353,
     "longitude": 25.272664
   },
   {
-    "area": "Kärsämäki",
+    "municipality": "Kärsämäki",
     "latitude": 63.981404,
     "longitude": 25.75745
   },
   {
-    "area": "Kökar",
+    "municipality": "Kökar",
     "latitude": 59.92107,
     "longitude": 20.908501
   },
   {
-    "area": "Lahti",
+    "municipality": "Lahti",
     "latitude": 60.982995,
     "longitude": 25.65739
   },
   {
-    "area": "Laihia",
+    "municipality": "Laihia",
     "latitude": 62.97807,
     "longitude": 22.01341
   },
   {
-    "area": "Laitila",
+    "municipality": "Laitila",
     "latitude": 60.874496,
     "longitude": 21.696631
   },
   {
-    "area": "Lapinjärvi",
+    "municipality": "Lapinjärvi",
     "latitude": 60.624626,
     "longitude": 26.219344
   },
   {
-    "area": "Lapinlahti",
+    "municipality": "Lapinlahti",
     "latitude": 63.366375,
     "longitude": 27.391945
   },
   {
-    "area": "Lappajärvi",
+    "municipality": "Lappajärvi",
     "latitude": 63.225242,
     "longitude": 23.629999
   },
   {
-    "area": "Lappeenranta",
+    "municipality": "Lappeenranta",
     "latitude": 61.05534,
     "longitude": 28.189015
   },
   {
-    "area": "Lapua",
+    "municipality": "Lapua",
     "latitude": 62.972328,
     "longitude": 23.003516
   },
   {
-    "area": "Laukaa",
+    "municipality": "Laukaa",
     "latitude": 62.417359,
     "longitude": 25.946853
   },
   {
-    "area": "Lemi",
+    "municipality": "Lemi",
     "latitude": 61.066706,
     "longitude": 27.800534
   },
   {
-    "area": "Lemland",
+    "municipality": "Lemland",
     "latitude": 60.069302,
     "longitude": 20.09314
   },
   {
-    "area": "Lempäälä",
+    "municipality": "Lempäälä",
     "latitude": 61.315624,
     "longitude": 23.752397
   },
   {
-    "area": "Leppävirta",
+    "municipality": "Leppävirta",
     "latitude": 62.489596,
     "longitude": 27.76713
   },
   {
-    "area": "Lestijärvi",
+    "municipality": "Lestijärvi",
     "latitude": 63.522005,
     "longitude": 24.66676
   },
   {
-    "area": "Lieksa",
+    "municipality": "Lieksa",
     "latitude": 63.314515,
     "longitude": 30.030851
   },
   {
-    "area": "Lieto",
+    "municipality": "Lieto",
     "latitude": 60.505772,
     "longitude": 22.463812
   },
   {
-    "area": "Liminka",
+    "municipality": "Liminka",
     "latitude": 64.80177,
     "longitude": 25.43184
   },
   {
-    "area": "Liperi",
+    "municipality": "Liperi",
     "latitude": 62.52556,
     "longitude": 29.383436
   },
   {
-    "area": "Lohja",
+    "municipality": "Lohja",
     "latitude": 60.2511,
     "longitude": 24.069765
   },
   {
-    "area": "Loimaa",
+    "municipality": "Loimaa",
     "latitude": 60.85407,
     "longitude": 23.038995
   },
   {
-    "area": "Loppi",
+    "municipality": "Loppi",
     "latitude": 60.71954,
     "longitude": 24.442365
   },
   {
-    "area": "Loviisa",
+    "municipality": "Loviisa",
     "latitude": 60.456844,
     "longitude": 26.223666
   },
   {
-    "area": "Luhanka",
+    "municipality": "Luhanka",
     "latitude": 61.794222,
     "longitude": 25.698467
   },
   {
-    "area": "Lumijoki",
+    "municipality": "Lumijoki",
     "latitude": 64.836995,
     "longitude": 25.189025
   },
   {
-    "area": "Lumparland",
+    "municipality": "Lumparland",
     "latitude": 60.117008,
     "longitude": 20.257311
   },
   {
-    "area": "Luoto",
+    "municipality": "Luoto",
     "latitude": 63.70996,
     "longitude": 22.760435
   },
   {
-    "area": "Luumäki",
+    "municipality": "Luumäki",
     "latitude": 60.952165,
     "longitude": 27.756825
   },
   {
-    "area": "Maalahti",
+    "municipality": "Maalahti",
     "latitude": 62.94592,
     "longitude": 21.560395
   },
   {
-    "area": "Maarianhamina",
+    "municipality": "Maarianhamina",
     "latitude": 60.114182,
     "longitude": 19.93779
   },
   {
-    "area": "Marttila",
+    "municipality": "Marttila",
     "latitude": 60.585304,
     "longitude": 22.898861
   },
   {
-    "area": "Masku",
+    "municipality": "Masku",
     "latitude": 60.574737,
     "longitude": 22.098343
   },
   {
-    "area": "Merijärvi",
+    "municipality": "Merijärvi",
     "latitude": 64.294595,
     "longitude": 24.445745
   },
   {
-    "area": "Merikarvia",
+    "municipality": "Merikarvia",
     "latitude": 61.865629,
     "longitude": 21.503468
   },
   {
-    "area": "Miehikkälä",
+    "municipality": "Miehikkälä",
     "latitude": 60.671575,
     "longitude": 27.700618
   },
   {
-    "area": "Mikkeli",
+    "municipality": "Mikkeli",
     "latitude": 61.68674,
     "longitude": 27.271265
   },
   {
-    "area": "Muhos",
+    "municipality": "Muhos",
     "latitude": 64.804925,
     "longitude": 26.01023
   },
   {
-    "area": "Multia",
+    "municipality": "Multia",
     "latitude": 62.40972,
     "longitude": 24.799535
   },
   {
-    "area": "Muonio",
+    "municipality": "Muonio",
     "latitude": 67.956815,
     "longitude": 23.67901
   },
   {
-    "area": "Mustasaari",
+    "municipality": "Mustasaari",
     "latitude": 63.119705,
     "longitude": 21.70406
   },
   {
-    "area": "Muurame",
+    "municipality": "Muurame",
     "latitude": 62.13533,
     "longitude": 25.669128
   },
   {
-    "area": "Mynämäki",
+    "municipality": "Mynämäki",
     "latitude": 60.678033,
     "longitude": 21.991107
   },
   {
-    "area": "Myrskylä",
+    "municipality": "Myrskylä",
     "latitude": 60.669951,
     "longitude": 25.854529
   },
   {
-    "area": "Mäntsälä",
+    "municipality": "Mäntsälä",
     "latitude": 60.62147,
     "longitude": 25.305248
   },
   {
-    "area": "Mänttä-Vilppula",
+    "municipality": "Mänttä-Vilppula",
     "latitude": 62.03001,
     "longitude": 24.62209
   },
   {
-    "area": "Mäntyharju",
+    "municipality": "Mäntyharju",
     "latitude": 61.41808,
     "longitude": 26.869615
   },
   {
-    "area": "Naantali",
+    "municipality": "Naantali",
     "latitude": 60.46513,
     "longitude": 22.033525
   },
   {
-    "area": "Nakkila",
+    "municipality": "Nakkila",
     "latitude": 61.36619,
     "longitude": 22.011645
   },
   {
-    "area": "Nivala",
+    "municipality": "Nivala",
     "latitude": 63.929419,
     "longitude": 24.961603
   },
   {
-    "area": "Nokia",
+    "municipality": "Nokia",
     "latitude": 61.480752,
     "longitude": 23.504198
   },
   {
-    "area": "Nousiainen",
+    "municipality": "Nousiainen",
     "latitude": 60.59747,
     "longitude": 22.085055
   },
   {
-    "area": "Nurmes",
+    "municipality": "Nurmes",
     "latitude": 63.553481,
     "longitude": 29.11571
   },
   {
-    "area": "Nurmijärvi",
+    "municipality": "Nurmijärvi",
     "latitude": 60.463125,
     "longitude": 24.806005
   },
   {
-    "area": "Närpiö",
+    "municipality": "Närpiö",
     "latitude": 62.477885,
     "longitude": 21.33744
   },
   {
-    "area": "Orimattila",
+    "municipality": "Orimattila",
     "latitude": 60.801865,
     "longitude": 25.733415
   },
   {
-    "area": "Oripää",
+    "municipality": "Oripää",
     "latitude": 60.85864,
     "longitude": 22.692045
   },
   {
-    "area": "Orivesi",
+    "municipality": "Orivesi",
     "latitude": 61.68487,
     "longitude": 24.358665
   },
   {
-    "area": "Oulainen",
+    "municipality": "Oulainen",
     "latitude": 64.259667,
     "longitude": 24.812921
   },
   {
-    "area": "Oulu",
+    "municipality": "Oulu",
     "latitude": 65.0103,
     "longitude": 25.473505
   },
   {
-    "area": "Outokumpu",
+    "municipality": "Outokumpu",
     "latitude": 62.73283,
     "longitude": 29.042715
   },
   {
-    "area": "Padasjoki",
+    "municipality": "Padasjoki",
     "latitude": 61.34781,
     "longitude": 25.235023
   },
   {
-    "area": "Paimio",
+    "municipality": "Paimio",
     "latitude": 60.443621,
     "longitude": 22.708334
   },
   {
-    "area": "Paltamo",
+    "municipality": "Paltamo",
     "latitude": 64.407416,
     "longitude": 27.838446
   },
   {
-    "area": "Parainen",
+    "municipality": "Parainen",
     "latitude": 60.305691,
     "longitude": 22.29858
   },
   {
-    "area": "Parikkala",
+    "municipality": "Parikkala",
     "latitude": 61.55702,
     "longitude": 29.501105
   },
   {
-    "area": "Parkano",
+    "municipality": "Parkano",
     "latitude": 62.010322,
     "longitude": 23.0171
   },
   {
-    "area": "Pedersören kunta",
+    "municipality": "Pedersören kunta",
     "latitude": 63.595305,
     "longitude": 22.80812
   },
   {
-    "area": "Pelkosenniemi",
+    "municipality": "Pelkosenniemi",
     "latitude": 67.110002,
     "longitude": 27.516146
   },
   {
-    "area": "Pello",
+    "municipality": "Pello",
     "latitude": 66.77385,
     "longitude": 23.96518
   },
   {
-    "area": "Perho",
+    "municipality": "Perho",
     "latitude": 63.213983,
     "longitude": 24.420002
   },
   {
-    "area": "Pertunmaa",
+    "municipality": "Pertunmaa",
     "latitude": 61.509962,
     "longitude": 26.484513
   },
   {
-    "area": "Petäjävesi",
+    "municipality": "Petäjävesi",
     "latitude": 62.265472,
     "longitude": 25.174509
   },
   {
-    "area": "Pieksämäki",
+    "municipality": "Pieksämäki",
     "latitude": 62.3037,
     "longitude": 27.174275
   },
   {
-    "area": "Pielavesi",
+    "municipality": "Pielavesi",
     "latitude": 63.232952,
     "longitude": 26.753837
   },
   {
-    "area": "Pietarsaari",
+    "municipality": "Pietarsaari",
     "latitude": 63.676392,
     "longitude": 22.710959
   },
   {
-    "area": "Pihtipudas",
+    "municipality": "Pihtipudas",
     "latitude": 63.371128,
     "longitude": 25.5853
   },
   {
-    "area": "Pirkkala",
+    "municipality": "Pirkkala",
     "latitude": 61.465795,
     "longitude": 23.644545
   },
   {
-    "area": "Polvijärvi",
+    "municipality": "Polvijärvi",
     "latitude": 62.857241,
     "longitude": 29.367568
   },
   {
-    "area": "Pomarkku",
+    "municipality": "Pomarkku",
     "latitude": 61.693107,
     "longitude": 22.007664
   },
   {
-    "area": "Pori",
+    "municipality": "Pori",
     "latitude": 61.48596,
     "longitude": 21.79537
   },
   {
-    "area": "Pornainen",
+    "municipality": "Pornainen",
     "latitude": 60.47661,
     "longitude": 25.374226
   },
   {
-    "area": "Porvoo",
+    "municipality": "Porvoo",
     "latitude": 60.396315,
     "longitude": 25.67008
   },
   {
-    "area": "Posio",
+    "municipality": "Posio",
     "latitude": 66.110892,
     "longitude": 28.166155
   },
   {
-    "area": "Pudasjärvi",
+    "municipality": "Pudasjärvi",
     "latitude": 65.370215,
     "longitude": 26.991629
   },
   {
-    "area": "Pukkila",
+    "municipality": "Pukkila",
     "latitude": 60.640601,
     "longitude": 25.591799
   },
   {
-    "area": "Punkalaidun",
+    "municipality": "Punkalaidun",
     "latitude": 61.111575,
     "longitude": 23.107605
   },
   {
-    "area": "Puolanka",
+    "municipality": "Puolanka",
     "latitude": 64.872728,
     "longitude": 27.649692
   },
   {
-    "area": "Puumala",
+    "municipality": "Puumala",
     "latitude": 61.525505,
     "longitude": 28.182515
   },
   {
-    "area": "Pyhtää",
+    "municipality": "Pyhtää",
     "latitude": 60.492014,
     "longitude": 26.544139
   },
   {
-    "area": "Pyhäjoki",
+    "municipality": "Pyhäjoki",
     "latitude": 64.47197,
     "longitude": 24.26695
   },
   {
-    "area": "Pyhäjärvi",
+    "municipality": "Pyhäjärvi",
     "latitude": 63.689744,
     "longitude": 25.976689
   },
   {
-    "area": "Pyhäntä",
+    "municipality": "Pyhäntä",
     "latitude": 64.095275,
     "longitude": 26.335255
   },
   {
-    "area": "Pyhäranta",
+    "municipality": "Pyhäranta",
     "latitude": 60.949436,
     "longitude": 21.445088
   },
   {
-    "area": "Pälkäne",
+    "municipality": "Pälkäne",
     "latitude": 61.33605,
     "longitude": 24.270205
   },
   {
-    "area": "Pöytyä",
+    "municipality": "Pöytyä",
     "latitude": 60.7615,
     "longitude": 22.639326
   },
   {
-    "area": "Raahe",
+    "municipality": "Raahe",
     "latitude": 64.686915,
     "longitude": 24.478425
   },
   {
-    "area": "Raasepori",
+    "municipality": "Raasepori",
     "latitude": 59.974495,
     "longitude": 23.43588
   },
   {
-    "area": "Raisio",
+    "municipality": "Raisio",
     "latitude": 60.486745,
     "longitude": 22.16776
   },
   {
-    "area": "Rantasalmi",
+    "municipality": "Rantasalmi",
     "latitude": 62.069351,
     "longitude": 28.301371
   },
   {
-    "area": "Ranua",
+    "municipality": "Ranua",
     "latitude": 65.926348,
     "longitude": 26.532502
   },
   {
-    "area": "Rauma",
+    "municipality": "Rauma",
     "latitude": 61.131158,
     "longitude": 21.51052
   },
   {
-    "area": "Rautalampi",
+    "municipality": "Rautalampi",
     "latitude": 62.62407,
     "longitude": 26.82811
   },
   {
-    "area": "Rautavaara",
+    "municipality": "Rautavaara",
     "latitude": 63.495035,
     "longitude": 28.29572
   },
   {
-    "area": "Rautjärvi",
+    "municipality": "Rautjärvi",
     "latitude": 61.29778,
     "longitude": 29.085722
   },
   {
-    "area": "Reisjärvi",
+    "municipality": "Reisjärvi",
     "latitude": 63.60517,
     "longitude": 24.93969
   },
   {
-    "area": "Riihimäki",
+    "municipality": "Riihimäki",
     "latitude": 60.739375,
     "longitude": 24.77402
   },
   {
-    "area": "Ristijärvi",
+    "municipality": "Ristijärvi",
     "latitude": 64.504467,
     "longitude": 28.214936
   },
   {
-    "area": "Rovaniemi",
+    "municipality": "Rovaniemi",
     "latitude": 66.503566,
     "longitude": 25.72803
   },
   {
-    "area": "Ruokolahti",
+    "municipality": "Ruokolahti",
     "latitude": 61.291877,
     "longitude": 28.839552
   },
   {
-    "area": "Ruovesi",
+    "municipality": "Ruovesi",
     "latitude": 61.984715,
     "longitude": 24.06743
   },
   {
-    "area": "Rusko",
+    "municipality": "Rusko",
     "latitude": 60.541445,
     "longitude": 22.221875
   },
   {
-    "area": "Rääkkylä",
+    "municipality": "Rääkkylä",
     "latitude": 62.310827,
     "longitude": 29.621337
   },
   {
-    "area": "Saarijärvi",
+    "municipality": "Saarijärvi",
     "latitude": 62.708545,
     "longitude": 25.254251
   },
   {
-    "area": "Salla",
+    "municipality": "Salla",
     "latitude": 66.832804,
     "longitude": 28.669221
   },
   {
-    "area": "Salo",
+    "municipality": "Salo",
     "latitude": 60.385868,
     "longitude": 23.123019
   },
   {
-    "area": "Saltvik",
+    "municipality": "Saltvik",
     "latitude": 60.273251,
     "longitude": 20.061131
   },
   {
-    "area": "Sastamala",
+    "municipality": "Sastamala",
     "latitude": 61.336878,
     "longitude": 22.919194
   },
   {
-    "area": "Sauvo",
+    "municipality": "Sauvo",
     "latitude": 60.343468,
     "longitude": 22.69416
   },
   {
-    "area": "Savitaipale",
+    "municipality": "Savitaipale",
     "latitude": 61.19241,
     "longitude": 27.68872
   },
   {
-    "area": "Savonlinna",
+    "municipality": "Savonlinna",
     "latitude": 61.86839,
     "longitude": 28.86763
   },
   {
-    "area": "Savukoski",
+    "municipality": "Savukoski",
     "latitude": 67.292067,
     "longitude": 28.159309
   },
   {
-    "area": "Seinäjoki",
+    "municipality": "Seinäjoki",
     "latitude": 62.790695,
     "longitude": 22.83961
   },
   {
-    "area": "Sievi",
+    "municipality": "Sievi",
     "latitude": 63.90279,
     "longitude": 24.52265
   },
   {
-    "area": "Siikainen",
+    "municipality": "Siikainen",
     "latitude": 61.8769,
     "longitude": 21.819924
   },
   {
-    "area": "Siikajoki",
+    "municipality": "Siikajoki",
     "latitude": 64.81545,
     "longitude": 24.76677
   },
   {
-    "area": "Siikalatva",
+    "municipality": "Siikalatva",
     "latitude": 64.27163,
     "longitude": 25.86645
   },
   {
-    "area": "Siilinjärvi",
+    "municipality": "Siilinjärvi",
     "latitude": 63.085685,
     "longitude": 27.64824
   },
   {
-    "area": "Simo",
+    "municipality": "Simo",
     "latitude": 65.662619,
     "longitude": 25.064864
   },
   {
-    "area": "Sipoo",
+    "municipality": "Sipoo",
     "latitude": 60.376721,
     "longitude": 25.260191
   },
   {
-    "area": "Siuntio",
+    "municipality": "Siuntio",
     "latitude": 60.13887,
     "longitude": 24.226915
   },
   {
-    "area": "Sodankylä",
+    "municipality": "Sodankylä",
     "latitude": 67.41504,
     "longitude": 26.59288
   },
   {
-    "area": "Soini",
+    "municipality": "Soini",
     "latitude": 62.873469,
     "longitude": 24.205324
   },
   {
-    "area": "Somero",
+    "municipality": "Somero",
     "latitude": 60.633157,
     "longitude": 23.516982
   },
   {
-    "area": "Sonkajärvi",
+    "municipality": "Sonkajärvi",
     "latitude": 63.672532,
     "longitude": 27.523183
   },
   {
-    "area": "Sotkamo",
+    "municipality": "Sotkamo",
     "latitude": 64.13229,
     "longitude": 28.403585
   },
   {
-    "area": "Sottunga",
+    "municipality": "Sottunga",
     "latitude": 60.132771,
     "longitude": 20.667259
   },
   {
-    "area": "Sulkava",
+    "municipality": "Sulkava",
     "latitude": 61.78578,
     "longitude": 28.363181
   },
   {
-    "area": "Sund",
+    "municipality": "Sund",
     "latitude": 60.223572,
     "longitude": 20.16362
   },
   {
-    "area": "Suomussalmi",
+    "municipality": "Suomussalmi",
     "latitude": 64.901105,
     "longitude": 29.00588
   },
   {
-    "area": "Suonenjoki",
+    "municipality": "Suonenjoki",
     "latitude": 62.632818,
     "longitude": 27.109937
   },
   {
-    "area": "Sysmä",
+    "municipality": "Sysmä",
     "latitude": 61.501815,
     "longitude": 25.68206
   },
   {
-    "area": "Säkylä",
+    "municipality": "Säkylä",
     "latitude": 61.05062,
     "longitude": 22.345205
   },
   {
-    "area": "Taipalsaari",
+    "municipality": "Taipalsaari",
     "latitude": 61.158295,
     "longitude": 28.06702
   },
   {
-    "area": "Taivalkoski",
+    "municipality": "Taivalkoski",
     "latitude": 65.577905,
     "longitude": 28.24417
   },
   {
-    "area": "Taivassalo",
+    "municipality": "Taivassalo",
     "latitude": 60.560767,
     "longitude": 21.608999
   },
   {
-    "area": "Tammela",
+    "municipality": "Tammela",
     "latitude": 60.80691,
     "longitude": 23.759515
   },
   {
-    "area": "Tampere",
+    "municipality": "Tampere",
     "latitude": 61.497815,
     "longitude": 23.762265
   },
   {
-    "area": "Tervo",
+    "municipality": "Tervo",
     "latitude": 62.956725,
     "longitude": 26.761735
   },
   {
-    "area": "Tervola",
+    "municipality": "Tervola",
     "latitude": 66.08813,
     "longitude": 24.81107
   },
   {
-    "area": "Teuva",
+    "municipality": "Teuva",
     "latitude": 62.484847,
     "longitude": 21.731505
   },
   {
-    "area": "Tohmajärvi",
+    "municipality": "Tohmajärvi",
     "latitude": 62.224743,
     "longitude": 30.336742
   },
   {
-    "area": "Toholampi",
+    "municipality": "Toholampi",
     "latitude": 63.773585,
     "longitude": 24.24994
   },
   {
-    "area": "Toivakka",
+    "municipality": "Toivakka",
     "latitude": 62.097295,
     "longitude": 26.08123
   },
   {
-    "area": "Tornio",
+    "municipality": "Tornio",
     "latitude": 65.84615,
     "longitude": 24.14993
   },
   {
-    "area": "Turku",
+    "municipality": "Turku",
     "latitude": 60.452805,
     "longitude": 22.251551
   },
   {
-    "area": "Tuusniemi",
+    "municipality": "Tuusniemi",
     "latitude": 62.80344,
     "longitude": 28.4994
   },
   {
-    "area": "Tuusula",
+    "municipality": "Tuusula",
     "latitude": 60.403298,
     "longitude": 25.025975
   },
   {
-    "area": "Tyrnävä",
+    "municipality": "Tyrnävä",
     "latitude": 64.763503,
     "longitude": 25.651559
   },
   {
-    "area": "Ulvila",
+    "municipality": "Ulvila",
     "latitude": 61.428095,
     "longitude": 21.871769
   },
   {
-    "area": "Urjala",
+    "municipality": "Urjala",
     "latitude": 61.078695,
     "longitude": 23.529807
   },
   {
-    "area": "Utajärvi",
+    "municipality": "Utajärvi",
     "latitude": 64.740102,
     "longitude": 26.457534
   },
   {
-    "area": "Utsjoki",
+    "municipality": "Utsjoki",
     "latitude": 69.907867,
     "longitude": 27.026083
   },
   {
-    "area": "Uurainen",
+    "municipality": "Uurainen",
     "latitude": 62.499668,
     "longitude": 25.440316
   },
   {
-    "area": "Uusikaarlepyy",
+    "municipality": "Uusikaarlepyy",
     "latitude": 63.5226,
     "longitude": 22.531275
   },
   {
-    "area": "Uusikaupunki",
+    "municipality": "Uusikaupunki",
     "latitude": 60.80506,
     "longitude": 21.427349
   },
   {
-    "area": "Vaala",
+    "municipality": "Vaala",
     "latitude": 64.557848,
     "longitude": 26.834128
   },
   {
-    "area": "Vaasa",
+    "municipality": "Vaasa",
     "latitude": 63.098385,
     "longitude": 21.62624
   },
   {
-    "area": "Valkeakoski",
+    "municipality": "Valkeakoski",
     "latitude": 61.266222,
     "longitude": 24.031582
   },
   {
-    "area": "Vantaa",
+    "municipality": "Vantaa",
     "latitude": 60.289348,
     "longitude": 25.029676
   },
   {
-    "area": "Varkaus",
+    "municipality": "Varkaus",
     "latitude": 62.313675,
     "longitude": 27.88505
   },
   {
-    "area": "Vehmaa",
+    "municipality": "Vehmaa",
     "latitude": 60.686319,
     "longitude": 21.716895
   },
   {
-    "area": "Vesanto",
+    "municipality": "Vesanto",
     "latitude": 62.930615,
     "longitude": 26.411057
   },
   {
-    "area": "Vesilahti",
+    "municipality": "Vesilahti",
     "latitude": 61.30993,
     "longitude": 23.617832
   },
   {
-    "area": "Veteli",
+    "municipality": "Veteli",
     "latitude": 63.473257,
     "longitude": 23.78932
   },
   {
-    "area": "Vieremä",
+    "municipality": "Vieremä",
     "latitude": 63.742805,
     "longitude": 27.002092
   },
   {
-    "area": "Vihti",
+    "municipality": "Vihti",
     "latitude": 60.418226,
     "longitude": 24.340545
   },
   {
-    "area": "Viitasaari",
+    "municipality": "Viitasaari",
     "latitude": 63.088372,
     "longitude": 25.861098
   },
   {
-    "area": "Vimpeli",
+    "municipality": "Vimpeli",
     "latitude": 63.15917,
     "longitude": 23.83321
   },
   {
-    "area": "Virolahti",
+    "municipality": "Virolahti",
     "latitude": 60.58785,
     "longitude": 27.708096
   },
   {
-    "area": "Virrat",
+    "municipality": "Virrat",
     "latitude": 62.250793,
     "longitude": 23.782074
   },
   {
-    "area": "Vårdö",
+    "municipality": "Vårdö",
     "latitude": 60.242458,
     "longitude": 20.37208
   },
   {
-    "area": "Vöyri",
+    "municipality": "Vöyri",
     "latitude": 63.131269,
     "longitude": 22.252743
   },
   {
-    "area": "Ylitornio",
+    "municipality": "Ylitornio",
     "latitude": 66.326255,
     "longitude": 23.677035
   },
   {
-    "area": "Ylivieska",
+    "municipality": "Ylivieska",
     "latitude": 64.074284,
     "longitude": 24.537461
   },
   {
-    "area": "Ylöjärvi",
+    "municipality": "Ylöjärvi",
     "latitude": 61.554755,
     "longitude": 23.574351
   },
   {
-    "area": "Ypäjä",
+    "municipality": "Ypäjä",
     "latitude": 60.80466,
     "longitude": 23.281096
   },
   {
-    "area": "Ähtäri",
+    "municipality": "Ähtäri",
     "latitude": 62.559352,
     "longitude": 24.085723
   },
   {
-    "area": "Äänekoski",
+    "municipality": "Äänekoski",
     "latitude": 62.617039,
     "longitude": 25.684345
   }

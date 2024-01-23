@@ -32,7 +32,7 @@ class _NewRoutePageState extends State<NewRoutePage> {
   final ScrollController _scrollController = ScrollController();
   final GlobalKey<RouteSelectorState> _routeSelector = GlobalKey();
   final GlobalKey _listWidget = GlobalKey();
-    final TextFieldItem _startTextField = TextFieldItem();
+  final TextFieldItem _startTextField = TextFieldItem();
   final TextFieldItem _destinationTextField = TextFieldItem();
   List<TextFieldItem> _waypointTextFields = [];
   double? _textfieldHeight;
@@ -85,7 +85,7 @@ class _NewRoutePageState extends State<NewRoutePage> {
   }
 
   bool _selectionEqualsRoute() {
-        _route = null;
+    _route = null;
     _routeSelector.currentState!.selectedRoute = null;
     return false;
   }
@@ -99,7 +99,7 @@ class _NewRoutePageState extends State<NewRoutePage> {
   Future<void> _navigateToMapAndGetRoute(BuildContext context) async {
     if (start != null &&
         destination != null &&
-        start!.area == destination!.area) {
+        start!.municipality == destination!.municipality) {
       ErrorSnackbar.show(context,
           Error(message: AppLocalizations.of(context).destination_error));
       return;
@@ -141,15 +141,16 @@ class _NewRoutePageState extends State<NewRoutePage> {
         await LocalDatabase().searchRoute(start!, destination!, waypoints);
     if (local != null) return local;
     final result = await DirectionsProvider.fetchRoute(
-      start: start!, destination: destination!, waypoints: waypoints);
-final id = await LocalDatabase().addRoute(result, FirebaseAuth.instance.currentUser!.uid);
+        start: start!, destination: destination!, waypoints: waypoints);
+    final id = await LocalDatabase()
+        .addRoute(result, FirebaseAuth.instance.currentUser!.uid);
     return CustomRoute(result.legs, id);
   }
 
   Future<void> _navigateToDateSelection(BuildContext context) async {
     if (start != null &&
         destination != null &&
-        start!.area == destination!.area) {
+        start!.municipality == destination!.municipality) {
       ErrorSnackbar.show(context,
           Error(message: AppLocalizations.of(context).destination_error));
       return;
@@ -292,7 +293,7 @@ final id = await LocalDatabase().addRoute(result, FirebaseAuth.instance.currentU
               _waypointTextFields = _waypointTextFields.reversed.toList();
               if (_route != null) {
                 _route = _route!.reverse();
-}
+              }
             });
           },
         ),

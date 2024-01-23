@@ -29,7 +29,7 @@ class LocalDatabase {
       await db.execute('CREATE TABLE User (id TEXT PRIMARY KEY) WITHOUT ROWID');
       await db.insert('User', {"id": uid});
       await db.execute(
-          'CREATE TABLE Point (id INTEGER PRIMARY KEY, latitude REAL NOT NULL, longitude REAL NOT NULL, area TEXT NOT NULL, UNIQUE (latitude, longitude))');
+          'CREATE TABLE Point (id INTEGER PRIMARY KEY, latitude REAL NOT NULL, longitude REAL NOT NULL, municipality TEXT NOT NULL, UNIQUE (latitude, longitude))');
       await db.execute(
           'CREATE TABLE Leg (id INTEGER PRIMARY KEY, polyline TEXT NOT NULL, start INTEGER NOT NULL, destination INTEGER NOT NULL, distance INTEGER NOT NULL, duration INTEGER NOT NULL, route INTEGER NOT NULL, count INTEGER NOT NULL, FOREIGN KEY (start) REFERENCES Point (id), FOREIGN KEY (destination) REFERENCES Point (id), FOREIGN KEY (route) REFERENCES Route (id))');
       await db.execute(
@@ -72,7 +72,7 @@ class LocalDatabase {
 
   Future<Point> _getPointTxn(int id, Transaction txn) async =>
       Point.fromJson((await txn.query("Point",
-              columns: ["latitude", "longitude", "area"],
+              columns: ["latitude", "longitude", "municipality"],
               where: "id = ?",
               whereArgs: [id]))
           .first);

@@ -132,9 +132,9 @@ class _ConfirmPageState extends State<ConfirmPage> {
                           ErrorSnackbar.show(context, Error());
                         });
                       });
-
+                      
                       if (!mounted) return;
-
+                      
                       if (rideKey != null) {
                         final id = Id(
                             driver: FirebaseAuth.instance.currentUser!.uid,
@@ -142,8 +142,8 @@ class _ConfirmPageState extends State<ConfirmPage> {
                         context.read<RideIdProvider>().add(id);
                         context.read<TimeProvider>().update(id, time);
                                                 context.read<StatusProvider>().update(id);
-                        Navigator.pop(context, rideKey);
-                      }
+                        Navigator.pop(context);
+}
                     },
                     label: Text(AppLocalizations.of(context).add_ride),
                     icon: const Icon(Icons.add),
